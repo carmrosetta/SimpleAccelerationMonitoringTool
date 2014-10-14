@@ -18,22 +18,23 @@
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:text="New Text"
+        android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:gravity="center_vertical"
         android:id="@+id/toolName"
         android:layout_toEndOf="@+id/toolIcon"
         android:layout_alignTop="@+id/toolIcon"
-        android:layout_toRightOf="@+id/toolIcon"
-        android:layout_marginLeft="35dp" />
+        android:layout_toLeftOf="@+id/toggleButton"
+        android:layout_toStartOf="@+id/toggleButton"
+        android:layout_toRightOf="@+id/toolIcon" />
 
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:text="New ToggleButton"
         android:id="@+id/toggleButton"
-        android:layout_alignTop="@+id/imageButton"
         android:layout_toLeftOf="@+id/imageButton"
-        android:layout_toStartOf="@+id/imageButton" />
+        android:layout_toStartOf="@+id/imageButton"
+        android:layout_alignParentTop="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
         android:src="@drawable/ic_action_settings"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
 
 
 </RelativeLayout>
