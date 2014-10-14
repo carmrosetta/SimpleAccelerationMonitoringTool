@@ -6,14 +6,12 @@ import android.widget.ToggleButton;
  * Created by carmen on 13/10/14.
  */
 public class Tool {
-   int icon;
+   
     String name;
 
 
 
-    public Tool(/*int icon,*/ String name) {
-
-        //this.icon = icon;
+    public Tool(String name) {
         this.name = name;
     }
 
@@ -25,9 +23,7 @@ public class Tool {
         this.name = name;
     }
 
-    public int getIcon() {
-        return icon;
-    }
+
 
     @Override
     public String toString() {
