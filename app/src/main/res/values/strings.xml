@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Acceleration Monitoring Tool</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tools">ToolsActivity</string>
+
+    <string-array name="smart_phone_position_array">
+        <item>Left front trouser pocket</item>
+        <item>Right front trouser pocket</item>
+        <item>Left back trouser pocket</item>
+        <item>Left back trouser pocket</item>
+        <item>Handbag</item>
+        <item>Waist (front)</item>
+        <item>Waist (back)</item>
+        <item>Chest (jacket pocket)</item>
+    </string-array>
+    <string-array name="delay_rates_array">
+        <item>SENSOR_DELAY_NORMAL</item>
+        <item>SENSOR_DELAY_UI</item>
+        <item>SENSOR_DELAY_GAME</item>
+        <item>SENSOR_DELAY_FASTEST</item>
+    </string-array>
+    <string-array name="tools_array">
+        <item>Sensor Data Logger</item>
+        <item>Gait Recognition</item>
+        <item>Posture Detection</item>
+        <item>Impact Detection</item>
+    </string-array>
+
+    <string name="title_activity_sensor_data_logger_settings">SensorDataLoggerSettings</string>
+    <string name="title_activity_gait_recognition_settings">GaitRecognitionSettings</string>
+
+</resources>

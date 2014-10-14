@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip"
+    android:id="@+id/relativeLayoutTools">
+
+    <ImageView
+        android:id="@+id/toolIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="6dip"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="New Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_vertical"
+        android:id="@+id/toolName"
+        android:layout_toEndOf="@+id/toolIcon"
+        android:layout_alignTop="@+id/toolIcon"
+        android:layout_toRightOf="@+id/toolIcon"
+        android:layout_marginLeft="35dp" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="New ToggleButton"
+        android:id="@+id/toggleButton"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_toLeftOf="@+id/imageButton"
+        android:layout_toStartOf="@+id/imageButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageButton"
+        android:src="@drawable/ic_action_settings"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
