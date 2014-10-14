@@ -2,6 +2,7 @@ package ing.unipi.it.simpleaccelerationmonitoringtool;
 
 import java.util.ArrayList;
 import android.content.Context;
+import android.content.Intent;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -92,7 +93,18 @@ public class MultiSelectionAdapter<T> extends BaseAdapter{
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Settings item #"+position, Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 0:
+                        Intent i = new Intent(mContext, SensorDataLoggerSettings.class);
+                        mContext.startActivity(i);
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
             }
         });
         return convertView;

@@ -6,7 +6,7 @@ import android.widget.ToggleButton;
  * Created by carmen on 13/10/14.
  */
 public class Tool {
-   
+
     String name;
 
 

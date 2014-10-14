@@ -2,6 +2,8 @@ package ing.unipi.it.simpleaccelerationmonitoringtool;
 
 
 import android.app.Activity;
+import android.content.Intent;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +14,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class ToolsActivity extends Activity implements View.OnClickListener {
+    //todo decidere come trattare queste info che per ora sono costanti ma successivamente non lo saranno ma devono essere scelte dall'utente
+    public final static String SMARTPHONE_POSITION  = "Left front trouser pocket";
+    public final static int SAMPLING_FREQUENCY = SensorManager.SENSOR_DELAY_FASTEST;
 
 
     ListView mListView;
@@ -100,7 +105,15 @@ public class ToolsActivity extends Activity implements View.OnClickListener {
 
             Log.d(MainActivity.class.getSimpleName(), "Selected Items: " + mArrayTools.toString());
 
-            Toast.makeText(getApplicationContext(), "Selected Items: " + mArrayTools.toString(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "Selected Items: " + mArrayTools.toString(), Toast.LENGTH_LONG).show();
+
+
+            //todo fare partire il servizio che si occupa di inserire i campioni dell'accelerometro in un buffer circolare
+
+            Intent intent = new Intent(getApplicationContext(), AccelerationSamplingService.class);
+            startService(intent);
+            finish();
+
 
         }
 

@@ -72,9 +72,11 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                // Toast.makeText(getApplicationContext(), smartphonePosition, Toast.LENGTH_LONG).show();
                // Toast.makeText(getApplicationContext(), speed, Toast.LENGTH_LONG).show();
-                //TODO far partire l'activity successiva
+
                 Intent intent = new Intent(getApplicationContext(), ToolsActivity.class);
+                //todo decidere se inviare freq di campionamento e posizione dello smartphone con l'intent o salvarli nelle shared preferences e poi recuperarle al momento opportuno
                 startActivity(intent);
+                finish();
             }
         });
 
