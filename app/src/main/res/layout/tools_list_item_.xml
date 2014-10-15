@@ -8,37 +8,42 @@
         android:id="@+id/toolIcon"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_launcher"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="6dip"
-        android:contentDescription="TODO"
-        android:src="@drawable/ic_launcher" />
+        android:layout_alignParentBottom="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
+
         android:text="New Text"
-        android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:gravity="center_vertical"
+        android:textAlignment="gravity"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/toolName"
         android:layout_toEndOf="@+id/toolIcon"
-        android:layout_alignTop="@+id/toolIcon"
-        android:layout_toLeftOf="@+id/toggleButton"
         android:layout_toStartOf="@+id/toggleButton"
-        android:layout_toRightOf="@+id/toolIcon" />
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/toggleButton"
+        android:layout_alignParentTop="true"
+        style="@style/AppTheme"
+        android:gravity="left"
+        android:lines="1"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:singleLine="true" />
 
     <ToggleButton
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:id="@+id/toggleButton"
+        android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/imageButton"
         android:layout_toStartOf="@+id/imageButton"
         android:layout_alignParentTop="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:id="@+id/imageButton"
         android:src="@drawable/ic_action_settings"
         android:layout_alignParentBottom="true"

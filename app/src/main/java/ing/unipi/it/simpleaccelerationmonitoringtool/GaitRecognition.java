@@ -1,8 +1,5 @@
 package ing.unipi.it.simpleaccelerationmonitoringtool;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -12,32 +9,38 @@ import android.util.Log;
 import java.io.File;
 
 /**
- * Created by carmen on 14/10/14.
+ * Created by carmen on 15/10/14.
  */
-public class SensorDataLogger implements Runnable, SensorEventListener {
+public class GaitRecognition  implements Runnable, SensorEventListener {
 
-    long lastUpdate = 0l ;
+    long lastUpdate = 0l;
     long count = 0l;
+
+
 
 
     File directory, file;
 
-    public SensorDataLogger() {
+    public GaitRecognition() {
+
+
 
         directory = Utilities.createDirectory("PROVE_CAMPIONI");
-        file = Utilities.createFile(directory, "file_logger.txt");
+        file = Utilities.createFile(directory, "file_gait.txt");
     }
 
     @Override
     public void run() {
+
+
 
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
 
-      //  Log.d("SensorDataLogger","Sample acquired  "+event.values[0]);
-       long sampleTime = System.currentTimeMillis();
+       // Log.e("GaitRecognition", "Sample acquired at "+event.values[0]);
+        long sampleTime = System.currentTimeMillis();
         getData(event, sampleTime);
     }
 
@@ -64,10 +67,14 @@ public class SensorDataLogger implements Runnable, SensorEventListener {
             sensedValues += ", "+values[j];
         }
 
-        //Utilities.writeData(file, timestamp+sensedValues+"\n");
-        //Utilities.writeData(file, event.timestamp+sensedValues+"\n");
+
+        // Log.e("Sensor data logger","Sample acquired at "+timeStamp+" " +event.values[0]);
+       Utilities.writeData(file, Utilities.getTimeInSeconds(count) +sensedValues+"\n");
        // Utilities.writeData(file, event.timestamp +sensedValues+"\n");
-        Utilities.writeData(file, Utilities.getTimeInSeconds(count) +sensedValues+"\n");
+       // Utilities.writeData(file, event.timestamp+sensedValues+"\n");
+
+
 
     }
 }
+
